@@ -15,10 +15,9 @@ if (navigator.serviceWorker) {
   })
 }
 
-window.onload = function() {
-
-// this calculates the volume of the sphere
- const params = new URLSearchParams(document.location.search)
+window.onload = function () {
+  // this calculates the volume of the sphere
+  const params = new URLSearchParams(document.location.search)
 
   //input
   const radius = parseFloat(params.get("r"))
@@ -27,6 +26,8 @@ window.onload = function() {
   const volume = (4 / 3) * Math.PI * radius ** 3
 
   //output
-  document.getElementById("radius").innerHTML = "<h6>Radius = " + radius + "</h6)"
-  document.getElementById("volume").innerHTML = "<h6>Volume is: " + volume.toFixed(2) + " cm³</h6>"
+  document.getElementById("radius").innerHTML =
+    "<h6>Radius = " + radius + "</h6)"
+  document.getElementById("volume").innerHTML =
+    "<h6>Volume is: " + volume.toFixed(2) + " cm³</h6>"
 }
